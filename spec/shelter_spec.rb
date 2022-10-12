@@ -64,7 +64,26 @@ RSpec.describe Shelter do
 
         shelter.add_pet('Spot')
         shelter.add_pet('Jonesy')
+
         expect(shelter.over_capacity?).to be true
       end
+
+      it 'can show if multiple shelters are over capacity' do
+        shelter = Shelter.new('Denver Animal Shelter', 6)
+        shelter_2 = Shelter.new('Chaffee Animal Shelter', 3)
+        shelter.add_pet('Salem')
+        shelter.add_pet('Beethoven')
+        shelter.add_pet('River')
+        shelter.add_pet('Bodi')
+        shelter_2.add_pet('Sam')
+        shelter_2.add_pet('Buddy')
+        shelter_2.add_pet('Dean')
+        shelter_2.add_pet('Wicklow')
+
+        expect(shelter.over_capacity?).to be false
+        expect(shelter_2.over_capacity?).to be true
+      end
     end
+
+  
 end

@@ -23,4 +23,12 @@ class Shelter
     end
   end
 
+  def over_capacity?
+    if @pets.length > @capacity
+      true
+    else
+      false
+    end
+  end
+
 end
