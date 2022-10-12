@@ -6,8 +6,6 @@ RSpec.describe Shelter do
   # Iteration 1
   describe '#initialize' do
     it 'is a Shelter' do
-      skip
-
       shelter = Shelter.new('Denver Animal Shelter', 5)
       expect(shelter).to be_a(Shelter)
     end
@@ -47,11 +45,11 @@ RSpec.describe Shelter do
 
       expect(shelter.pets).to eq(['Salem', 'Beethoven', 'Spot', 'Jonesy'])
     end
-  end 
+  end
 
   describe '#call_pets' do
       it 'returns a list of names with exclamation points appended' do
-        skip 
+        skip
 
         shelter = Shelter.new('Denver Animal Shelter', 5)
         shelter.add_pet('Salem')
