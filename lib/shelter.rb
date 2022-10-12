@@ -19,7 +19,7 @@ class Shelter
 
   def call_pets
     @pets.map do |pet|
-      "#{pet}" + "!"
+      pet + "!"
     end
   end
 
