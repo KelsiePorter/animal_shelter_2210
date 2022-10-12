@@ -94,6 +94,8 @@ RSpec.describe Shelter do
         shelter.add_pet('Spot')
         shelter.add_pet('Jonesy')
 
+        expect(shelter.over_capacity?).to be true
+
         shelter.adopt
 
         expect(shelter.over_capacity?).to be false
