@@ -13,6 +13,10 @@ class Shelter
     @pets << pet_name
   end
 
+  def patrons
+    @pets
+  end
+
   def call_pets
     @pets.map do |pet|
       "#{pet}" + "!"

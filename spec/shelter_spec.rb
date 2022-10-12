@@ -48,6 +48,7 @@ RSpec.describe Shelter do
         shelter.add_pet('Spot')
         shelter.add_pet('Jonesy')
 
+        expect(shelter.patrons).to eq(['Salem', 'Beethoven', 'Spot', 'Jonesy'])
         expect(shelter.call_pets).to eq(['Salem!', 'Beethoven!', 'Spot!', 'Jonesy!'])
       end
     end
