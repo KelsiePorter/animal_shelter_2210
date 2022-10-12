@@ -1,9 +1,13 @@
 class Shelter
   attr_reader :name,
-              :capacity
+              :capacity,
+              :pets
 
   def initialize(name, capacity)
     @name = name
-    @capactity = capacity
+    @capacity = capacity
+    @pets = []
   end
+
+  
 end
