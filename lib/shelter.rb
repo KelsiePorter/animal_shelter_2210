@@ -31,4 +31,10 @@ class Shelter
     end
   end
 
+  def adopt
+    while over_capacity? do
+      @pets.pop
+    end
+  end
+
 end
